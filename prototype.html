@@ -7,126 +7,158 @@
       onload="this.rel='stylesheet'"
       href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
     />
-    <style>
-      .scrollable-container {
-	height: 300px; /* Adjust height as needed */
-	overflow-y: auto;
-      }
-    </style>
 
-    <title>Galileo Design</title>
+    <title>FIDO Tagging Tool Design</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   </head>
   <body>
     <div
-      class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
-      style='--select-button-svg: url(&apos;data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(99,117,136)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e&apos;); font-family: "Public Sans", "Noto Sans", sans-serif;'
+      class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-auto"
+      style='--select-button-svg: url(&apos;data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(140,95,117)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e&apos;); font-family: "Public Sans", "Noto Sans", sans-serif;'
     >
       <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#111418]">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f5f0f2] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#181114]">
             <div class="size-4">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"
-                  fill="currentColor"
+                  fill="#D6086B"
                 ></path>
               </svg>
             </div>
-            <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">FIDO</h2>
+            <h2 style="color: #D6086B;" class="text-[#181114] text-lg font-bold leading-tight tracking-[-0.015em]">FIDO</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#d6086b] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">New</span>
+              </button>
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[#f5f0f2] text-[#181114] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+              >
+                <div class="text-[#181114]" data-icon="Question" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://cdn.usegalileo.ai/sdxl10/c2bb96d8-8c90-4a60-aff1-b869e89c1e45.png");'
+            ></div>
           </div>
         </header>
         <div class="px-40 flex flex-1 justify-center py-5">
           <div class="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">
-            <h3 class="text-[#111418] tracking-light text-2xl font-bold leading-tight px-4 text-center pb-2 pt-5">Document Review</h3>
-            <div class="flex items-center gap-4 bg-white px-4 min-h-14">
-              <div class="text-[#111418] flex items-center justify-center rounded-lg bg-[#f0f2f4] shrink-0 size-10" data-icon="File" data-size="24px" data-weight="regular">
+            <h2 class="text-[#181114] tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">Document Review</h2>
+            <h3 class="text-[#181114] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Document</h3>
+            <div class="flex w-full grow bg-white @container p-4">
+              <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[2/3] rounded-xl flex">
+                <div
+                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1 border border-grey-500 object-contain"
+                  style='background-image: url("Screenshot 2024-07-30 at 13.27.48.png");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
+              <div class="text-[#181114] flex items-center justify-center rounded-lg bg-[#f5f0f2] shrink-0 size-12" data-icon="FileText" data-size="24px" data-weight="regular">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
                   <path
-                    d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Z"
+                    d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"
                   ></path>
                 </svg>
               </div>
-              <p class="text-[#111418] text-base font-normal leading-normal flex-1 truncate"><b>Category:</b> Water Bill</p>
-            </div>
-	    <div class="flex items-center gap-4 bg-white px-4 min-h-14">
-              <div class="text-[#111418] flex items-center justify-center rounded-lg bg-[#f0f2f4] shrink-0 size-10" data-icon="File" data-size="24px" data-weight="regular">
-                <img src="Custom-Icon-Design-Silky-Line-User-Users.512.png" alt="Custom Icon" width="24px" height="24px"/>
+              <div class="flex flex-col justify-center">
+                <p class="text-[#181114] text-base font-medium leading-normal line-clamp-1">Water bill</p>
+                <p class="text-[#8c5f75] text-sm font-normal leading-normal line-clamp-2">Document Category</p>
               </div>
-              <p class="text-[#111418] text-base font-normal leading-normal flex-1 truncate"><b>Customer:</b> James Jones Jr</p>
             </div>
-           <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-  	   	<div class="flex flex-col gap-3 scrollable-container">
-    			<div
-      			  class="w-full bg-top bg-no-repeat aspect-video bg-cover rounded-xl"
-      			  style='background-image: url("Screenshot 2024-07-23 at 19.03.18.png");'
-    			></div>
-  	   	</div>
-	   </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
+              <div class="text-[#181114] flex items-center justify-center rounded-lg bg-[#f5f0f2] shrink-0 size-12" data-icon="User" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-[#181114] text-base font-medium leading-normal line-clamp-1">John Smith</p>
+                <p class="text-[#8c5f75] text-sm font-normal leading-normal line-clamp-2">Customer</p>
+              </div>
+            </div>
+            <h3 class="text-[#181114] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Opened?</h3>
             <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
               <label class="flex flex-col min-w-40 flex-1">
-	      <span class="dropdown-title">File Opened</span>
                 <select
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#637588] p-4 text-base font-normal leading-normal"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#181114] focus:outline-0 focus:ring-0 border-none bg-[#f5f0f2] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#8c5f75] p-4 text-base font-normal leading-normal"
                 >
                   <option value="one">Yes</option>
                   <option value="two">No</option>
                 </select>
               </label>
             </div>
+            <h3 class="text-[#181114] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Readable quality?</h3>
             <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
               <label class="flex flex-col min-w-40 flex-1">
-	      <span class="dropdown-title">Image Quality</span>
                 <select
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#637588] p-4 text-base font-normal leading-normal"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#181114] focus:outline-0 focus:ring-0 border-none bg-[#f5f0f2] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#8c5f75] p-4 text-base font-normal leading-normal"
                 >
-                  <option value="one">Good, easy to read</option>
-                  <option value="two">Impossible to read</option>
+                  <option value="one">Yes</option>
+                  <option value="two">No</option>
                 </select>
               </label>
             </div>
+            <h3 class="text-[#181114] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Choose category</h3>
             <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
               <label class="flex flex-col min-w-40 flex-1">
-	      <span class="dropdown-title">Choose category</span>
                 <select
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#637588] p-4 text-base font-normal leading-normal"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#181114] focus:outline-0 focus:ring-0 border-none bg-[#f5f0f2] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#8c5f75] p-4 text-base font-normal leading-normal"
                 >
                   <option value="one">Appointment letter</option>
-                  <option value="two">Electricity bill</option>
-		  <option value="three">Payslip</option>
-		  <option value="four">Water bill</option>
-		  <option value="five">Other</option>
-
+                  <option value="two">Bank statement</option>
+                  <option value="three">Form A</option>
+		  <option value="four">Electricity bill</option>
+		  <option value="five">Payslip</option>
+		  <option value="six">Water bill</option>
+		  <option value="seven">Other</option>
                 </select>
               </label>
             </div>
+            <h3 class="text-[#181114] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Name match?</h3>
             <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
               <label class="flex flex-col min-w-40 flex-1">
-	      <span class="dropdown-title">Correct customer name?</span>
                 <select
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#637588] p-4 text-base font-normal leading-normal"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#181114] focus:outline-0 focus:ring-0 border-none bg-[#f5f0f2] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#8c5f75] p-4 text-base font-normal leading-normal"
                 >
                   <option value="one">Yes</option>
                   <option value="two">No</option>
                 </select>
               </label>
             </div>
+            <h3 class="text-[#181114] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Expired?</h3>
             <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
               <label class="flex flex-col min-w-40 flex-1">
-	      <span class="dropdown-title">Document expired?</span>
                 <select
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#637588] p-4 text-base font-normal leading-normal"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#181114] focus:outline-0 focus:ring-0 border-none bg-[#f5f0f2] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#8c5f75] p-4 text-base font-normal leading-normal"
                 >
                   <option value="one">No</option>
                   <option value="two">Yes</option>
                 </select>
               </label>
             </div>
-            <div class="flex px-4 py-3">
+            <div class="flex px-4 py-3 justify-end">
               <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 flex-1 bg-[#1980e6] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-[#d6086b] text-white text-base font-bold leading-normal tracking-[0.015em]"
               >
                 <span class="truncate">Submit</span>
               </button>
