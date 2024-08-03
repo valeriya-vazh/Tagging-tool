@@ -96,7 +96,7 @@
                 <p class="text-[#8c5f75] text-sm font-normal leading-normal line-clamp-2">Customer</p>
               </div>
             </div>
-            <h3 class="text-[#181114] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Opened?</h3>
+            <h3 class="text-[#181114] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Can you open the file?</h3>
             <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
               <label class="flex flex-col min-w-40 flex-1">
                 <select
@@ -107,13 +107,13 @@
                 </select>
               </label>
             </div>
-            <h3 class="text-[#181114] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Readable quality?</h3>
+            <h3 class="text-[#181114] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Is the quality good enough?</h3>
             <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
               <label class="flex flex-col min-w-40 flex-1">
                 <select
                   class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#181114] focus:outline-0 focus:ring-0 border-none bg-[#f5f0f2] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#8c5f75] p-4 text-base font-normal leading-normal"
                 >
-                  <option value="one">Yes</option>
+                  <option value="one">Yes, I can read it easily</option>
                   <option value="two">No</option>
                 </select>
               </label>
@@ -134,7 +134,7 @@
                 </select>
               </label>
             </div>
-            <h3 class="text-[#181114] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Name match?</h3>
+            <h3 class="text-[#181114] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Does customer name match?</h3>
             <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
               <label class="flex flex-col min-w-40 flex-1">
                 <select
@@ -145,7 +145,7 @@
                 </select>
               </label>
             </div>
-            <h3 class="text-[#181114] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Expired?</h3>
+            <h3 class="text-[#181114] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Is the document expired?</h3>
             <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
               <label class="flex flex-col min-w-40 flex-1">
                 <select
@@ -153,6 +153,19 @@
                 >
                   <option value="one">No</option>
                   <option value="two">Yes</option>
+                </select>
+              </label>
+            </div>
+	    <h3 class="text-[#181114] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Does it look fake?</h3>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#181114] focus:outline-0 focus:ring-0 border-none bg-[#f5f0f2] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#8c5f75] p-4 text-base font-normal leading-normal"
+                >
+                  <option value="one">No</option>
+                  <option value="two">Yes, document is visibly altered</option>
+		  <option value="three">Yes, content seems wrong</option>
+		  <option value="three">Significant parts are missing (seal, signature etc.)</option>
                 </select>
               </label>
             </div>
